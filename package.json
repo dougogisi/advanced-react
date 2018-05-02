@@ -6,7 +6,7 @@
   "author": "Douglas Ogisi",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
@@ -19,12 +19,15 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
     "jest": "^22.4.3",
     "react-test-renderer": "^16.3.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
@@ -34,6 +37,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.3",
     "pm2": "^2.10.1",
+    "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "webpack": "^4.4.1",
